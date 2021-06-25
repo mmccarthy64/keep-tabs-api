@@ -21,6 +21,8 @@ gem 'puma', '~> 4.1'
 
 gem 'fast_jsonapi'
 
+gem 'pry'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
