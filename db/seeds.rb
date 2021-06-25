@@ -14,3 +14,13 @@ Book.create(title: "KJV Bible", author: "God", page_count: 1800, image: "https:/
 Book.create(title: "Theory and History", author: "Ludwig von Mises", page_count: 450, image: "https://upload.wikimedia.org/wikipedia/en/thumb/0/0d/HumanActionFirst.jpg/220px-HumanActionFirst.jpg")
 Book.create(title: "Modern Times", author: "Paul Johnson", page_count: 450, image: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Modern_Times_%28book%29.jpg/220px-Modern_Times_%28book%29.jpg")
 Book.create(title: "Man, Economy, and State", author: "Murray N. Rothbard", page_count: 450, image: "https://m.media-amazon.com/images/I/51Em01CeumL.jpg")
+
+Comment.create(content: "Good read", book: Book.find_by(title: "KJV Bible"))
+Comment.create(content: "I prefer the ESV", book: Book.find_by(title: "KJV Bible"))
+Comment.create(content: "Not great", book: Book.find_by(title: "Alexander Hamilton"))
+Comment.create(content: "Good read", book: Book.find_by(title: "The Fountainhead"))
+Comment.create(content: "meh", book: Book.find_by(title: "The Fountainhead"))
+Comment.create(content: "Not great", book: Book.find_by(title: "The Fountainhead"))
+Comment.create(content: "on point", book: Book.find_by(title: "The New Right"))
+Comment.create(content: "meh", book: Book.find_by(title: "The New Right"))
+Comment.create(content: "Wow!", book: Book.find_by(title: "Modern Times"))
