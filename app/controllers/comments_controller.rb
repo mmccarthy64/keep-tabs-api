@@ -3,10 +3,14 @@ class CommentsController < ApplicationController
 
   # GET /comments
   def index
-    book = Book.find_by(params[:book_id])
-    # comments = Comment.find(params[:book_id])
-    binding.pry
-    render json: CommentSerializer.new(book.comments)
+    if params[:book_id]
+      book = Book.find_by(id: params[:book_id])
+      comments = book.comments
+      render json: CommentSerializer.new(comments)
+    else
+      comments = Comment.all
+      render json: CommentSerializer.new(comments)
+    end
   end
 
   # GET /comments/1
@@ -15,6 +19,7 @@ class CommentsController < ApplicationController
     options = {
       include: [:book]
     }
+    binding.pry
     render json: CommentSerializer.new(comment, options)
   end
 
