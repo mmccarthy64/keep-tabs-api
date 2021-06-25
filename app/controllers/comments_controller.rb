@@ -3,14 +3,18 @@ class CommentsController < ApplicationController
 
   # GET /comments
   def index
-    @comments = Comment.all
+    comments = Comment.all
 
-    render json: @comments
+    render json: CommentSerializer.new(comments)
   end
 
   # GET /comments/1
   def show
-    render json: @comment
+    comment = Comment.find(params[:id])
+    options = {
+      include: [:book]
+    }
+    render json: CommentSerializer.new(comment, options)
   end
 
   # POST /comments
