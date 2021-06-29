@@ -6,10 +6,10 @@ class CommentsController < ApplicationController
     if params[:book_id]
       book = Book.find_by(id: params[:book_id])
       comments = book.comments
-      render json: CommentSerializer.new(comments)
+      render json: comments
     else
       comments = Comment.all
-      render json: CommentSerializer.new(comments)
+      render json: comments
     end
   end
 
