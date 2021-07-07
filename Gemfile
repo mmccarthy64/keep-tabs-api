@@ -24,7 +24,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'pry'
 
-gem 'rack-cors'
+gem 'rack-cors', :require => 'rack/cors'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
