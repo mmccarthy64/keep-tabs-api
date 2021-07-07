@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 Book.create(title: "Alexander Hamilton", author: "Ron Chernow", page_count: 570, image: "https://images-na.ssl-images-amazon.com/images/I/9168wNMBk1L.jpg")
 Book.create(title: "The New Right", author: "Michael Malice", page_count: 280, image: "https://images-na.ssl-images-amazon.com/images/I/510YXq4hZFL._SY291_BO1,204,203,200_QL40_ML2_.jpg")
 Book.create(title: "Starting Strength", author: "Mark Rippetoe", page_count: 600, image: "https://m.media-amazon.com/images/I/51qninUnshL.jpg")

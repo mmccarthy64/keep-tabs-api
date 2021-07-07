@@ -8,6 +8,7 @@ class RegistrationsController < ApplicationController
 
         if user
             session[:user_id] = user.id
+            binding.pry
             render json: {
                 status: :created,
                 user: user
