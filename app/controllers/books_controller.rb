@@ -4,7 +4,7 @@ class BooksController < ApplicationController
   # GET /books
   def index
     # binding.pry
-    if params[:session_id]
+    if params[:session_id] != []
       user = User.find_by(id: params[:session_id])
       # binding.pry
       books = user.books
