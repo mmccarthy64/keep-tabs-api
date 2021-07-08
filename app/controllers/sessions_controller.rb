@@ -14,6 +14,12 @@ include CurrentUserConcern
         end
     end
 
+    def show
+        # binding.pry
+        @user = User.find_by(id: params['id'])
+        render json: { user: @user }
+    end
+
     def logged_in
         if @current_user
             render json: {
