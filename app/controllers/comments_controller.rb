@@ -19,7 +19,6 @@ class CommentsController < ApplicationController
     options = {
       include: [:book]
     }
-    binding.pry
     render json: CommentSerializer.new(comment, options)
   end
 
